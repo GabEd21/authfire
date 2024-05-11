@@ -4,7 +4,8 @@ import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./firebase";
 import { ProtectedRoute } from "./components/protectedRoute";
 import { Home } from "./pages/home";
-import { Private } from "./pages/private";
+import Private from "./pages/private";
+
 
 import "./App.css";
 import { useEffect, useState } from "react";

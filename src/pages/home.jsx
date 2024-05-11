@@ -53,7 +53,7 @@ export const Home = ({ user }) => {
   }
   return (
     <section>
-      <h2>Homepage</h2>
+      <h2>Sports Shop</h2>
       <form>
         {isSignUpActive && <legend>Sign Up</legend>}
         {!isSignUpActive && <legend>Sign In</legend>}
