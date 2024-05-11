@@ -9,6 +9,7 @@ import Private from "./pages/private";
 
 import "./App.css";
 import { useEffect, useState } from "react";
+import Cart from "./pages/Cart";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -35,6 +36,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route index path="/" element={<Home user={user}></Home>}></Route>
+        <Route index path="/cart" element={<Cart></Cart>}></Route>
         <Route
           path="/private"
           element={

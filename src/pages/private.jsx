@@ -8,7 +8,6 @@ import Form from 'react-bootstrap/Form';
 const Private = () => {
   const [data, setData] = useState([]);
   const [quantity, setQuantity] = useState(0);
-  const [alertMessage, setAlertMessage] = useState("");
 
   const fetchData = async () => {
     const db = getFirestore();
