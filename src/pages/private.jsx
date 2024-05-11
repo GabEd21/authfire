@@ -2,12 +2,12 @@ import { getFirestore, collection, getDocs, addDoc } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 import { auth } from "../firebase";
 import Card from 'react-bootstrap/Card';
-import { Button } from 'react-bootstrap';
+import { Alert, Button } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 
 const Private = () => {
   const [data, setData] = useState([]);
-  const [quantity, setQuantity] = useState(1);
+  const [quantity, setQuantity] = useState(0);
   const [alertMessage, setAlertMessage] = useState("");
 
   const fetchData = async () => {
@@ -42,7 +42,7 @@ const Private = () => {
         quantity: quantity,
         totalAmount: totalAmount,
       });
-      setAlertMessage("Added to cart!");
+      alert("Item added to cart!");
       console.log("Document written with ID: ", docRef.id);
     } catch (e) {
       console.error("Error adding document: ", e);
